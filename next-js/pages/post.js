@@ -1,7 +1,5 @@
 import React from "react";
 import axios from "axios";
-import { removeComments } from "convert-source-map";
-
 function Post({ id, data }) {
   return (
     <div>
