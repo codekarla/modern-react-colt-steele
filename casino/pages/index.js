@@ -9,7 +9,7 @@ export default function Home() {
         <title>Casino!</title>
         <meta
           name="description"
-          content="Mini Exercises related to gambling - from the Modern React Bootcamp by Colt Steele."
+          content="Mini Exercises - from the Modern React Bootcamp by Colt Steele"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -30,7 +30,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/slotmachine">
+          <Link href="/slotmachine" as="/meow-slot-machine">
             <a className={styles.card}>
               <h2>Meow Slot Machine &rarr;</h2>
               <p>A dumb slot machine featuring meows.</p>

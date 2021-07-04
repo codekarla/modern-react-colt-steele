@@ -2,9 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import axios from "axios";
 
-export default function Meow(props) {
-  const cats = props.data;
-  console.log(cats);
+export default function Meow({ data }) {
+  console.table(data);
 
   return (
     <>
@@ -35,7 +34,7 @@ export async function getStaticProps() {
         format: "json",
         size: "med",
         mime_types: "jpg",
-        limit: 10,
+        limit: 8,
       },
     };
 
