@@ -108,6 +108,10 @@
   line-height: 1.5;
 }
 
+.card small {
+  opacity: 0.5;
+}
+
 .logo {
   height: 1em;
   margin-left: 0.5rem;
