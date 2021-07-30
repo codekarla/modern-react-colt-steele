@@ -3,9 +3,7 @@ import { padZeroes } from '../../utils';
 
 export default function Pokedex({ pokemon }) {
     const { name, id, type, base_experience } = pokemon;
-
     let newId = `${id}`.padStart(3, '0');
-    console.log(newId);
 
     return (
         <div
