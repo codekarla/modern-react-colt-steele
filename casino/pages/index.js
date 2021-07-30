@@ -31,6 +31,16 @@ export default function Home() {
                 </p>
 
                 <div className={styles.grid}>
+                    <Link href='/pokedex'>
+                        <a className={styles.card}>
+                            <h2>Pokedex &rarr;</h2>
+                            <p>
+                                Pokemon cards game{' '}
+                                <small>(Section 5: Pokedex Project)</small>
+                            </p>
+                        </a>
+                    </Link>
+
                     <Link href='/slotmachine' as='/meow-slot-machine'>
                         <a className={styles.card}>
                             <h2>Meow Slot Machine &rarr;</h2>
@@ -38,27 +48,6 @@ export default function Home() {
                                 A dumb slot machine featuring meows.{' '}
                                 <small>(Section 3: Props & More)</small>
                             </p>
-                        </a>
-                    </Link>
-
-                    <Link href='/x'>
-                        <a className={styles.card}>
-                            <h2>X &rarr;</h2>
-                            <p>Xxxxx...</p>
-                        </a>
-                    </Link>
-
-                    <Link href='/y'>
-                        <a className={styles.card}>
-                            <h2>Y &rarr;</h2>
-                            <p>Yyyyy...</p>
-                        </a>
-                    </Link>
-
-                    <Link href='/z'>
-                        <a className={styles.card}>
-                            <h2>Z &rarr;</h2>
-                            <p>Zzzzz...</p>
                         </a>
                     </Link>
                 </div>
