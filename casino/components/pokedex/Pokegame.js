@@ -3,17 +3,19 @@ import pokemons from '../../data/pokedex';
 import Pokedex from './Pokedex';
 
 export default function Pokegame() {
-    let length = pokemons.length / 2;
+    const hand1 = [];
+    const hand2 = [...pokemons];
 
-    const array1 = pokemons.slice(0, length);
-    const xp1 = array1
-        .map((p) => p.base_experience)
-        .reduce((sum, xp) => sum + xp);
+    while (hand1.length < hand2.length) {
+        let i = Math.floor(Math.random() * hand2.length);
+        let rand = hand2.splice(i, 1)[0];
+        hand1.push(rand);
+    }
 
-    const array2 = pokemons.slice(length);
-    const xp2 = array2
-        .map((p) => p.base_experience)
-        .reduce((sum, xp) => sum + xp);
+    // console.log(hand1, hand2);
+
+    let xp1 = hand1.reduce((sum, p) => sum + p.base_experience, 0);
+    let xp2 = hand2.reduce((sum, p) => sum + p.base_experience, 0);
 
     return (
         <div
@@ -23,8 +25,8 @@ export default function Pokegame() {
                 gap: 20,
             }}
         >
-            <Pokedex pokemons={array1} xp={xp1} isWinner={xp1 > xp2} />
-            <Pokedex pokemons={array2} xp={xp2} isWinner={xp2 > xp1} />
+            <Pokedex pokemons={hand1} xp={xp1} isWinner={xp1 > xp2} />
+            <Pokedex pokemons={hand2} xp={xp2} isWinner={xp2 > xp1} />
         </div>
     );
 }
