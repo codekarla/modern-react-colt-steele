@@ -1,14 +1,18 @@
 import React from 'react';
+import { padZeroes } from '../../utils';
 
 export default function Pokedex({ pokemon }) {
     const { name, id, type, base_experience } = pokemon;
+
+    let newId = `${id}`.padStart(3, '0');
+    console.log(newId);
 
     return (
         <div
             style={{
                 border: '2px solid #fff7',
                 borderRadius: 25,
-                maxWidth: 200,
+                maxWidth: 300,
                 margin: 10,
                 padding: '15px 30px',
                 textAlign: 'center',
@@ -16,7 +20,7 @@ export default function Pokedex({ pokemon }) {
         >
             <h3>{name}</h3>
             <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+                src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${newId}.png`}
             />
             <p>TYPE: {type}</p>
             <p>EXP: {base_experience}</p>
