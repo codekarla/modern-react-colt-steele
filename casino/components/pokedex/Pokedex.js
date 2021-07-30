@@ -5,10 +5,10 @@ import Pokecard from './Pokecard';
 
 export default function Pokedex() {
     return (
-        <section>
+        <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
             {pokemons.map((p) => (
                 <Pokecard pokemon={p} key={p.id} />
             ))}
-        </section>
+        </div>
     );
 }
