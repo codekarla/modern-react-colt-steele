@@ -1,5 +1,5 @@
 import React from 'react';
-import Pokedex from '../components/pokedex/Pokedex';
+import Pokegame from '../components/pokedex/Pokegame';
 
 export default function PokegamePage() {
     return (
@@ -7,12 +7,11 @@ export default function PokegamePage() {
             style={{
                 width: '100%',
                 padding: 30,
-                display: 'grid',
-                justifyItems: 'center',
+                textAlign: 'center',
             }}
         >
-            <h1>Pokedex</h1>
-            <Pokedex />
+            <h1>Pokedex Game</h1>
+            <Pokegame />
         </main>
     );
 }
