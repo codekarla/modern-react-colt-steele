@@ -1,38 +1,33 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import axios from 'axios';
-import { Button } from 'antd';
 import { PlayCircleOutlined } from '@ant-design/icons';
 
 import SlotMachine from '../components/SlotMachine';
-import { getRandomCat } from '../utils/slotmachine';
 import styles from '../styles/SlotMachine.module.css';
 
-export default function Meow({ data }) {
-    const [cats, setCats] = useState([data[0], data[0], data[0]]);
+export default function Meow() {
+    const [cats, setCats] = useState([0, 0, 0]);
     const [gameStatus, setGameStatus] = useState('start'); // start | winner | loser
 
     const handleClick = async () => {
         setGameStatus('playing');
         await setCats([]);
+
         const newCats = [];
         for (let i = 0; i < 3; i++) {
-            newCats.push(getRandomCat(data));
+            newCats.push(Math.floor(Math.random() * 5));
         }
 
-        console.log(newCats);
+        console.log(newCats.join(' - '));
         setCats(newCats);
 
         setTimeout(() => {
-            if (
-                newCats[0].id === newCats[1].id &&
-                newCats[1].id === newCats[2].id
-            ) {
+            if (newCats[0] === newCats[1] && newCats[1] === newCats[2]) {
                 setGameStatus('winner');
             } else {
                 setGameStatus('loser');
             }
-        }, 1000);
+        }, 300);
     };
 
     return (
@@ -50,10 +45,10 @@ export default function Meow({ data }) {
                     {gameStatus === 'start'
                         ? 'Click PLAY!'
                         : gameStatus === 'winner'
-                        ? 'Congratulations! You Win!'
+                        ? 'YOU WIN!'
                         : gameStatus === 'loser'
-                        ? 'Oops, you lost, try again!'
-                        : 'Loading Cats . . .'}
+                        ? 'YOU LOSE!'
+                        : '. . . .'}
                 </h2>
                 <SlotMachine cats={cats} />
                 <button onClick={handleClick}>
@@ -62,36 +57,4 @@ export default function Meow({ data }) {
             </main>
         </>
     );
-}
-
-export async function getStaticProps() {
-    try {
-        require('dotenv').config();
-
-        const config = {
-            headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': process.env.CAT_APIKEY || 'DEMO-API-KEY',
-            },
-            params: {
-                format: 'json',
-                size: 'med',
-                mime_types: 'jpg',
-                limit: 8,
-            },
-        };
-
-        const { data } = await axios.get(
-            'https://api.thecatapi.com/v1/images/search',
-            config
-        );
-
-        console.table(data);
-
-        return {
-            props: { data },
-        };
-    } catch (e) {
-        console.log('Something went wrong!\n', e.message);
-    }
 }
