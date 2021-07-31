@@ -1,27 +1,40 @@
 import React from 'react';
-import { padZeroes } from '../../utils';
+import styled from 'styled-components';
 
-export default function Pokedex({ pokemon }) {
+const Card = styled.div`
+    max-width: 250px;
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    border: 2px solid #fff7;
+    border-radius: 25px;
+    transition: 200ms ease;
+
+    img {
+        transition: 150ms ease-in-out;
+    }
+
+    :hover {
+        border-color: #fff;
+
+        img {
+            transform: scale(1.5);
+        }
+    }
+`;
+
+export default function Pokecard({ pokemon }) {
     const { name, id, type, base_experience } = pokemon;
     let newId = `${id}`.padStart(3, '0');
 
     return (
-        <div
-            style={{
-                border: '2px solid #fff7',
-                borderRadius: 25,
-                maxWidth: 300,
-                margin: 10,
-                padding: '15px 30px',
-                textAlign: 'center',
-            }}
-        >
+        <Card>
             <h3>{name}</h3>
             <img
                 src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${newId}.png`}
             />
             <p>TYPE: {type}</p>
             <p>EXP: {base_experience}</p>
-        </div>
+        </Card>
     );
 }

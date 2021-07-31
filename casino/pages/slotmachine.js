@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import { PlayCircleOutlined } from '@ant-design/icons';
 
 import SlotMachine from '../components/SlotMachine';
 import styles from '../styles/SlotMachine.module.css';
+import PlayHeader from '../components/PlayHeader';
 
 export default function Meow() {
     const [cats, setCats] = useState([0, 0, 0]);
     const [gameStatus, setGameStatus] = useState('start'); // start | winner | loser
 
-    const handleClick = async () => {
+    const handleClick = () => {
         setGameStatus('playing');
-        await setCats([]);
 
         const newCats = [];
         for (let i = 0; i < 3; i++) {
@@ -40,7 +39,8 @@ export default function Meow() {
                 />
             </Head>
             <main className={styles.meowpage}>
-                <h1>Meow Slot Machine</h1>
+                <PlayHeader title='Meow Slot Machine' click={handleClick} />
+
                 <h2>
                     {gameStatus === 'start'
                         ? 'Click PLAY!'
@@ -50,10 +50,8 @@ export default function Meow() {
                         ? 'YOU LOSE!'
                         : '. . . .'}
                 </h2>
+
                 <SlotMachine cats={cats} />
-                <button onClick={handleClick}>
-                    <PlayCircleOutlined /> PLAY
-                </button>
             </main>
         </>
     );

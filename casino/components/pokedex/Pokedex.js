@@ -10,6 +10,7 @@ export default function Pokedex({ pokemons, xp, isWinner }) {
                 backgroundColor: '#0003',
                 padding: 20,
                 borderRadius: 30,
+                textAlign: 'center',
             }}
         >
             <h1 style={color}>

@@ -7,10 +7,8 @@ export default function PokegamePage() {
             style={{
                 width: '100%',
                 padding: 30,
-                textAlign: 'center',
             }}
         >
-            <h1>Pokedex Game</h1>
             <Pokegame />
         </main>
     );
