@@ -38,7 +38,7 @@ export default function Meow() {
                     content='A dumb slot machine featuring meows.'
                 />
             </Head>
-            <main className={styles.meowpage}>
+            <div className={styles.meowpage}>
                 <PlayHeader title='Meow Slot Machine' click={handleClick} />
 
                 <h2>
@@ -52,7 +52,7 @@ export default function Meow() {
                 </h2>
 
                 <SlotMachine cats={cats} />
-            </main>
+            </div>
         </>
     );
 }

@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "yarn clean && next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "npx rimraf .next/cache"
   },
   "keywords": [],
   "author": "",
@@ -15,17 +16,16 @@
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "antd": "^4.16.6",
-    "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "next": "11.0.1",
     "next-images": "^1.8.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "eslint": "7.30.0",
-    "eslint-config-next": "11.0.1",
-    "styled-components": "^5.3.0"
+    "eslint-config-next": "11.0.1"
   }
 }

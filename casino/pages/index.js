@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
-import { Tooltip } from 'antd';
 
 export default function Home() {
     return (
@@ -15,12 +14,13 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <main className={styles.main}>
+            <div className={styles.main}>
                 <h1 className={styles.title}>
                     Welcome to{' '}
                     <a
                         href='https://www.udemy.com/course/modern-react-bootcamp/'
                         target='blank'
+                        rel='noreferrer'
                     >
                         Casino!
                     </a>
@@ -31,6 +31,16 @@ export default function Home() {
                 </p>
 
                 <div className={styles.grid}>
+                    <Link href='/slotmachine'>
+                        <a className={styles.card}>
+                            <h2>Meow Slot Machine &rarr;</h2>
+                            <p>
+                                A dumb slot machine featuring meows.{' '}
+                                <small>(Section 3: Props & More)</small>
+                            </p>
+                        </a>
+                    </Link>
+
                     <Link href='/pokedex'>
                         <a className={styles.card}>
                             <h2>Pokedex &rarr;</h2>
@@ -41,17 +51,19 @@ export default function Home() {
                         </a>
                     </Link>
 
-                    <Link href='/slotmachine' as='/meow-slot-machine'>
+                    <Link href='/rolldice'>
                         <a className={styles.card}>
-                            <h2>Meow Slot Machine &rarr;</h2>
+                            <h2>Dice Roller &rarr;</h2>
                             <p>
-                                A dumb slot machine featuring meows.{' '}
-                                <small>(Section 3: Props & More)</small>
+                                It rolls dice.{' '}
+                                <small>
+                                    (Section 7: React State Dice Exercise)
+                                </small>
                             </p>
                         </a>
                     </Link>
                 </div>
-            </main>
+            </div>
 
             <footer className={styles.footer}>July 2021</footer>
         </div>
