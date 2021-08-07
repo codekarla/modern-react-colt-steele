@@ -21,7 +21,7 @@ export default function RollDice() {
             setDie1(roll());
             setDie2(roll());
             setRolling(false);
-        }, 1000);
+        }, 1500);
     };
 
     return (
@@ -35,9 +35,10 @@ export default function RollDice() {
             <div
                 style={{
                     display: 'flex',
+                    flexFlow: 'row wrap',
                     justifyContent: 'center',
-                    gap: '9%',
-                    padding: 20,
+                    gap: 40,
+                    padding: 40,
                     color: 'pink',
                 }}
             >
