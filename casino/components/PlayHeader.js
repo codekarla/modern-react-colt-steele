@@ -30,12 +30,12 @@ const Header = styled.header`
     }
 `;
 
-export default function PlayHeader({ title, click }) {
+export default function PlayHeader({ title, click, btnText = 'PLAY' }) {
     return (
         <Header>
             <h1>{title}</h1>
             <button onClick={click}>
-                <PlayCircleOutlined /> PLAY
+                <PlayCircleOutlined /> {btnText}
             </button>
         </Header>
     );
