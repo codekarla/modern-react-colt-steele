@@ -10,7 +10,7 @@ export default function Die({ face }) {
             alt={face || 'Die'}
             style={{
                 width: '40%',
-                maxWidth: 500,
+                maxWidth: 400,
                 height: 'auto',
             }}
         />

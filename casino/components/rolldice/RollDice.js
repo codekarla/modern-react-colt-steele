@@ -11,20 +11,26 @@ const sides = ['one', 'two', 'three', 'four', 'five', 'six'];
 export default function RollDice() {
     const [die1, setDie1] = useState('one');
     const [die2, setDie2] = useState('one');
+    const [isRolling, setRolling] = useState(false);
 
     const roll = () => sides[Math.floor(Math.random() * sides.length)];
 
     const handleClick = () => {
-        setDie1(roll());
-        setDie2(roll());
+        setRolling(true);
+        setTimeout(() => {
+            setDie1(roll());
+            setDie2(roll());
+            setRolling(false);
+        }, 1000);
     };
 
     return (
         <>
             <PlayHeader
                 title='Dice Roller'
-                btnText='Roll Dice'
+                btnText={isRolling ? 'Rolling...' : 'Roll Dice'}
                 click={handleClick}
+                btnDisabled={isRolling}
             />
             <div
                 style={{
@@ -35,8 +41,8 @@ export default function RollDice() {
                     color: 'pink',
                 }}
             >
-                <Die face={die1} />
-                <Die face={die2} />
+                <Die face={die1} rolling={isRolling} />
+                <Die face={die2} rolling={isRolling} />
             </div>
         </>
     );

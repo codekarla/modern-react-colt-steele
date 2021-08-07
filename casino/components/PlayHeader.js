@@ -24,17 +24,27 @@ const Header = styled.header`
 
         :hover {
             cursor: pointer;
-            color: white;
-            border-color: white;
+            color: aqua;
+            border-color: aqua;
+        }
+
+        :disabled {
+            border-color: gray;
+            color: gray;
         }
     }
 `;
 
-export default function PlayHeader({ title, click, btnText = 'PLAY' }) {
+export default function PlayHeader({
+    title,
+    click,
+    btnText = 'PLAY',
+    btnDisabled = false,
+}) {
     return (
         <Header>
             <h1>{title}</h1>
-            <button onClick={click}>
+            <button onClick={click} disabled={btnDisabled}>
                 <PlayCircleOutlined /> {btnText}
             </button>
         </Header>
