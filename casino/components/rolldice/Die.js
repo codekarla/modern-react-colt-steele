@@ -3,11 +3,11 @@
 */
 import React from 'react';
 
-export default function Die({ face = 'one' }) {
+export default function Die({ face }) {
     return (
         <img
-            src={`dice/die-${face}.svg`}
-            alt={face}
+            src={face ? `dice/die-${face}.svg` : ''}
+            alt={face || 'Die'}
             style={{
                 width: '40%',
                 maxWidth: 500,
