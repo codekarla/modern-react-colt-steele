@@ -10,6 +10,7 @@ export default function Lotto() {
                     display: 'flex',
                     flexFlow: 'row wrap',
                     gap: 30,
+                    justifyContent: 'center',
                 }}
             >
                 <Lottery title='Lottery' numBalls={6} maxNum={40} />

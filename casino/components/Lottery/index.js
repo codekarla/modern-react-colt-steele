@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PlayHeader from '../PlayHeader';
 import Ball from './Ball';
 
 export default function Lottery({ title, numBalls, maxNum }) {
-    const handleClick = () => {};
+    const [balls, setBalls] = useState([]);
+
+    const random = (max) => Math.floor(Math.random() * max) + 1;
+    const handleClick = () => {
+        const arr = Array.from({ length: numBalls }, () => random(maxNum));
+        setBalls(arr);
+    };
 
     return (
         <section
@@ -23,10 +29,9 @@ export default function Lottery({ title, numBalls, maxNum }) {
                     padding: '0 30px 30px',
                 }}
             >
-                <Ball num={numBalls} />
-                <Ball num={maxNum} />
-                <Ball num={numBalls} />
-                <Ball num={maxNum} />
+                {balls.map((num, i) => (
+                    <Ball num={num} key={`${title}-${i}--${num}`} />
+                ))}
             </div>
         </section>
     );
