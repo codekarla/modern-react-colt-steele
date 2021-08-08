@@ -35,7 +35,7 @@ export default function Home() {
                         <a className={styles.card}>
                             <h2>Meow Slot Machine &rarr;</h2>
                             <p>
-                                A dumb slot machine featuring meows.{' '}
+                                A slot machine featuring meows.{' '}
                                 <small>(Section 3: Props & More)</small>
                             </p>
                         </a>
@@ -62,10 +62,20 @@ export default function Home() {
                             </p>
                         </a>
                     </Link>
+
+                    <Link href='/lotto'>
+                        <a className={styles.card}>
+                            <h2>Lotto &rarr;</h2>
+                            <p>
+                                Some random lotto numbers.{' '}
+                                <small>(Section 8: React State Patterns)</small>
+                            </p>
+                        </a>
+                    </Link>
                 </div>
             </div>
 
-            <footer className={styles.footer}>July 2021</footer>
+            <footer className={styles.footer}>July - August 2021</footer>
         </div>
     );
 }

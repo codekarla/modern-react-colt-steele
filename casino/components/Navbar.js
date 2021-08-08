@@ -17,6 +17,9 @@ export default function MyNavbar() {
             <Link href='/rolldice'>
                 <a>Dice Roller</a>
             </Link>
+            <Link href='/lotto'>
+                <a>Lotto</a>
+            </Link>
         </nav>
     );
 }
