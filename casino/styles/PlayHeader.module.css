@@ -1,0 +1,31 @@
+.playheader {
+    display: flex;
+    gap: 1rem;
+    padding: 10px 20px;
+}
+
+.playheader h1 {
+    flex-grow: 2;
+}
+
+.playheader button {
+    width: 180px;
+    margin: 10px auto;
+    padding: 8px 15px;
+    font-size: 1.5rem;
+    color: #28ffbf;
+    background-color: black;
+    border-radius: 30px;
+    border: 3px solid #28ffbfcc;
+    transition: 200ms ease;
+}
+.playheader button :hover {
+    cursor: pointer;
+    color: aqua;
+    border-color: aqua;
+}
+
+.playheader button :disabled {
+    border-color: gray;
+    color: gray;
+}
