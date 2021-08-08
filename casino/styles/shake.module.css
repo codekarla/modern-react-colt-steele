@@ -2,6 +2,10 @@
     animation: shakenbounce 1500ms ease infinite;
 }
 
+.shake2 {
+    animation: shakenbounce 800ms ease;
+}
+
 @keyframes shakenbounce {
     0%,
     70% {

@@ -1,31 +1,33 @@
 .playheader {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     padding: 10px 20px;
 }
 
 .playheader h1 {
-    flex-grow: 2;
+    color: aqua;
+    font-size: 2.25rem;
 }
 
 .playheader button {
-    width: 180px;
-    margin: 10px auto;
-    padding: 8px 15px;
-    font-size: 1.5rem;
+    margin: 20 auto;
+    padding: 10px 15px;
+    font-size: 1.25rem;
     color: #28ffbf;
-    background-color: black;
+    background-color: #000d;
     border-radius: 30px;
-    border: 3px solid #28ffbfcc;
+    border: 2px solid #28ffbfcc;
     transition: 200ms ease;
 }
-.playheader button :hover {
+.playheader button:hover {
     cursor: pointer;
     color: aqua;
     border-color: aqua;
 }
 
-.playheader button :disabled {
+.playheader button:disabled {
     border-color: gray;
     color: gray;
 }

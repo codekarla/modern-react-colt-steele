@@ -5,8 +5,16 @@ export default function Lotto() {
     return (
         <div>
             <h1>Game of Lotto</h1>
-            <Lottery title='Lottery' numBalls={6} maxNum={40} />
-            <Lottery title='Mini Play' numBalls={4} maxNum={9} />
+            <div
+                style={{
+                    display: 'flex',
+                    flexFlow: 'row wrap',
+                    gap: 30,
+                }}
+            >
+                <Lottery title='Lottery' numBalls={6} maxNum={40} />
+                <Lottery title='Mini Play' numBalls={4} maxNum={9} />
+            </div>
         </div>
     );
 }
