@@ -36,12 +36,15 @@ const CasinoLinks = () => (
         <Link href='/lotto'>
             <a>Lotto</a>
         </Link>
+        <Link href='/coinflipper'>
+            <a>Coin Flipper</a>
+        </Link>
     </>
 );
 
 export default function MyNavbar() {
     const [isBurgerOn, setBurgerOn] = useState(false);
-
+    const toggleBurger = () => setBurgerOn((s) => !s);
     return (
         <nav className={styles.navbar}>
             <Link href='/'>
@@ -50,10 +53,11 @@ export default function MyNavbar() {
             <div className={styles.collapse}>
                 <CasinoLinks />
             </div>
-            <a className={styles.burger} onClick={() => setBurgerOn((s) => !s)}>
+            <a className={styles.burger} onClick={toggleBurger}>
                 <MenuIcon />
             </a>
             <div
+                onClick={toggleBurger}
                 className={styles.burgermenu}
                 style={{ display: isBurgerOn ? 'flex' : 'none' }}
             >

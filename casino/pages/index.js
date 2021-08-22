@@ -72,6 +72,16 @@ export default function Home() {
                             </p>
                         </a>
                     </Link>
+
+                    <Link href='/coinflipper'>
+                        <a className={styles.card}>
+                            <h2>Coin Flipper &rarr;</h2>
+                            <p>
+                                Heads or Tails?{' '}
+                                <small>(Section 9: State Exercises)</small>
+                            </p>
+                        </a>
+                    </Link>
                 </div>
             </div>
 
