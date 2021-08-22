@@ -14,7 +14,7 @@ export default function Lottery({ title, numBalls, maxNum }) {
     return (
         <section
             style={{
-                border: '2px double #fffb',
+                border: '5px double #000c',
                 borderRadius: 20,
                 margin: 30,
             }}
@@ -25,6 +25,7 @@ export default function Lottery({ title, numBalls, maxNum }) {
                 style={{
                     display: 'flex',
                     flexFlow: 'row wrap',
+                    justifyContent: 'center',
                     gap: 20,
                     padding: '0 30px 30px',
                 }}
