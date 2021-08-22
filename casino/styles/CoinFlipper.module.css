@@ -1,0 +1,29 @@
+.coinflipper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flipstr {
+    padding: 0 20px;
+    text-align: center;
+    letter-spacing: 0.04rem;
+    color: #a2dbfa;
+}
+
+.imagebox {
+    width: 90vw;
+    max-width: 600px;
+    padding: 20px 0px 20px 40px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: white;
+    border: 4px solid #a2dbfa;
+    border-radius: 30px;
+}
+
+.imagebox img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
