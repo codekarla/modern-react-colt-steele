@@ -4,7 +4,7 @@ import Lottery from '../components/Lottery';
 export default function Lotto() {
     return (
         <div>
-            <h1>Game of Lotto</h1>
+            <h1 style={{ textAlign: 'center', padding: 20 }}>Game of Lotto</h1>
             <div
                 style={{
                     display: 'flex',

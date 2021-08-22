@@ -37,8 +37,8 @@ export default function RollDice() {
                     display: 'flex',
                     flexFlow: 'row wrap',
                     justifyContent: 'center',
-                    gap: 40,
-                    padding: 40,
+                    gap: 30,
+                    padding: 20,
                     color: 'pink',
                 }}
             >

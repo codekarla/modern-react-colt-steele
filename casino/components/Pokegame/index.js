@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import pokemons from '../../data/pokedex';
 import Pokedex from './Pokedex';
 import PlayHeader from '../PlayHeader';
+import styles from '../../styles/Pokegame.module.css';
 
 export default function Pokegame() {
     const [hands, setHands] = useState([[], []]);
@@ -27,13 +28,7 @@ export default function Pokegame() {
     return (
         <>
             <PlayHeader title='Pokedex Game' click={handleClick} />
-            <div
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: 20,
-                }}
-            >
+            <div className={styles.pokegame}>
                 <Pokedex
                     pokemons={hands[0]}
                     xp={xps[0]}

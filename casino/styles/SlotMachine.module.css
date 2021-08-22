@@ -1,31 +1,36 @@
 .meowpage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
 }
 
 .slotmachine {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 40vw;
-  min-width: 90vw;
-  margin: 0 auto;
-  border: 5px solid #000c;
-  background-color: #000c;
-  transition: 200ms ease-in-out;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vw;
+    min-width: 90vw;
+    margin: 0 auto;
+    border: 5px solid #000c;
+    background-color: #000c;
+    transition: 200ms ease-in-out;
 }
 
 .slotmachine div {
-  width: 30vw;
-  max-height: 40vw;
-  overflow: hidden;
-  border: 2px solid #000c;
-  border-radius: 20px;
+    width: 30vw;
+    min-width: 250px;
+    min-height: 300px;
+    max-height: 40vw;
+    overflow: hidden;
+    border: 2px solid #000c;
+    border-radius: 20px;
 }
 
 .slotmachine img {
-  width: 30vw;
-  height: auto;
+    width: 30vw;
+    min-width: 250px;
+    height: auto;
+    min-height: 300px;
 }

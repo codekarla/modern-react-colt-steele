@@ -10,8 +10,8 @@ export default function Die({ face, rolling }) {
             className={rolling ? styles.shake : ''}
             src={face ? `dice/die-${face}.svg` : ''}
             alt={face || 'Die'}
-            width='300'
-            height='300'
+            width='250'
+            height='250'
         />
     );
 }

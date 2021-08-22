@@ -1,0 +1,13 @@
+.pokegame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 720px) {
+    .pokegame {
+        /* border: 2px solid aqua; */
+        grid-template-columns: 1fr;
+    }
+}
