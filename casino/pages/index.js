@@ -85,7 +85,15 @@ export default function Home() {
                 </div>
             </div>
 
-            <footer className={styles.footer}>July - August 2021</footer>
+            <footer className={styles.footer}>
+                <a
+                    href='https://github.com/kleandra-v8/modern-react-colt-steele/tree/main/casino'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    July - August 2021 &nbsp; &#x2055; &nbsp; Karla Vargas
+                </a>
+            </footer>
         </div>
     );
 }

@@ -1,0 +1,67 @@
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 5px 30px;
+    background-color: black;
+
+    display: flex;
+}
+
+.collapse {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.navbar a {
+    margin: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    border-radius: 10px;
+    transition: 200ms ease;
+}
+
+.navbar a:hover {
+    color: black;
+    background-color: var(--primary);
+}
+
+.burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #000a;
+    /* border: 2px solid red; */
+}
+.burger svg {
+    width: 24px;
+    height: auto;
+    fill: #fffe;
+    cursor: pointer;
+}
+.burgermenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 50px 15px 20px;
+    background-color: #000d;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 720px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .collapse {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
