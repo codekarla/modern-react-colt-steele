@@ -23,4 +23,6 @@ a {
 
 .groovy-main-container {
     width: 100%;
+    height: 100vh;
+    padding-top: 40px;
 }
